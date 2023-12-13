@@ -42,7 +42,7 @@ The daily updates or logs will be written everyday and pushed to this repository
 
 These logs can be accessed by going through the index provided in this repository. For reference, these daily logs can also be attached with the daily updates mails that are sent from my side to my Team Leader.
 
-## abcd
+### Minimum Requirements
 > [!TIP]
-> Use ims
-> client 
+> ims
+> client
