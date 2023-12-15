@@ -59,17 +59,17 @@ While creating an Inventory-Spreasheet, the following should be ensured:
 ### **Creating Custom-Commands**                    
 IMS provides the user with the flexibility to create their own custom commands for retrieving inventory-data, by defining column-headers from the Inventory Spreadsheet, for displaying the inventory-data. It is heavily recommended to follow the analogy provided below for creating Custom-Commands related to objects. However, it should be noted that if data is insufficient then user can choose objects according to their preference and data. The analogy is as follows:
 ```
-kubectl get ns                                                          –> Client/Project details - DC, DR
-kubectl get deployments                                                 –> Application details
-kubectl get statefulsets                                                -> Clustered Applications
-kubectl get replicasets                                                 –> Load Balanced Applications
-kubectl get configmap                                                   -> Each Application's configuration
-kubectl get nodes                                                       -> Infra details - VMs, BareMetal, Kubernetes Cluster Name
-kubectl get pods                                                        -> Each Application's Instance
-kubectl get pv                                                          -> Total Storage (SAN/LAN)
-kubectl get pvc                                                         -> Individual Application's Shared Storage (Block Device, File)
-Kubectl get svc                                                         -> Application Endpoints (Ports)
-Kubectl get ingress                                                     -> Load Balancers & Ingress (In case of K8S-based application)
+kubectl get ns                                               –> Client/Project details - DC, DR
+kubectl get deployments                                      –> Application details
+kubectl get statefulsets                                     -> Clustered Applications
+kubectl get replicasets                                      –> Load Balanced Applications
+kubectl get configmap                                        -> Each Application's configuration
+kubectl get nodes                                            -> Infra details - VMs, BareMetal, Kubernetes Cluster Name
+kubectl get pods                                             -> Each Application's Instance
+kubectl get pv                                               -> Total Storage (SAN/LAN)
+kubectl get pvc                                              -> Individual Application's Shared Storage (Block Device, File)
+Kubectl get svc                                              -> Application Endpoints (Ports)
+Kubectl get ingress                                          -> Load Balancers & Ingress (In case of K8S-based application)
 ```
 
 | Example: `get nodes` could be used to tabularly display Inventory-data with columns like RAM, CPU, WWWN, etc. |
