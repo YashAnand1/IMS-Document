@@ -41,13 +41,13 @@ ________________________________________________________________________________
 ## 🌱 **Getting Started** 
 <!-- </div> -->
 
-### **Setting-Up**                                                      
+### 🌿 **Setting-Up**                                                      
 In order **to setup IMS** on a machine, the latest version can be downloaded from [here](). Once downloaded, follow these steps from the extracted directory: 
 - Open the 'etcd-v3.5.10-linux-amd64' sub-directory or install etcd from [here](https://etcd.io/docs/v3.4/install/#install-pre-built-binaries) if system has a different architecture
 - Copy the 'etcd' binary to /usr/local/bin and run the 'etcd' command inside the extracted directory
 - In 2 separate terminal tabs, run the 'ims-server' and 'imsclient' executables 
 
-### **Creating Inventory-Spreadsheet**                              
+### 🌿 **Creating Inventory-Spreadsheet**                              
 Once the etcd-database and IMS-Server are running in the background, the IMS-Client can now be used for managing inventories. However, it is first required for the user to have their Inventory details added in a Spreadsheet that follows [this format](https://docs.google.com/spreadsheets/d/1uD_DGOMjUwTxNnKYPTUNstaMcq13ON43Eb_JR8EJIVc/edit#gid=0). Once the spreadsheet has been created, it should be downloaded in the XLSX format for uploading it to IMS. It is recommended to download in the same directory as the IMS-Client application.
 
 While creating an Inventory-Spreasheet, the following should be ensured:
@@ -56,7 +56,7 @@ While creating an Inventory-Spreasheet, the following should be ensured:
 - Names of column headers are not changed
 - The standardised format is being followed
 
-### **Creating Custom-Commands**                    
+### 🌿 **Creating Custom-Commands**                    
 IMS provides the user with the flexibility to create their own custom commands for retrieving inventory-data, by defining column-headers from the Inventory Spreadsheet, for displaying the inventory-data. It is heavily recommended to follow the analogy provided below for creating Custom-Commands related to objects. However, it should be noted that if data is insufficient then user can choose objects according to their preference and data. The analogy is as follows:
 ```
 kubectl get ns                                               –> Client/Project details - DC, DR
@@ -99,7 +99,7 @@ In the above file, the IP address is of the machine running the IMS-Server. Sinc
 - Any spaces (" ") should be avoided
 - Mentioned Project Name and Included Columns should match the Inventory-Spreadsheet
 
-### **Managing Inventories With IMS-Client**                               
+### 🌿 **Managing Inventories With IMS-Client**                               
 Once the Inventory-Spreadsheet and Custom-Commands have been made, the `ims-client` executable should be run for getting started with managing inventories. Provided below are explanations of the steps required to use IMS-Client for Managing Inventories.
 
 1. After the `ims-client` executable has been started, the user would be required to login. Login with User `admin` with Password `admin`, that is created when this application has been run for the first time. 
@@ -114,7 +114,7 @@ Once the Inventory-Spreadsheet and Custom-Commands have been made, the `ims-clie
 
 ![img](https://i.imgur.com/H8dxFg0.png)
 
-## Troubleshooting Issues & Errors:
+## 💢 Troubleshooting Issues & Errors:
 
 ### Error: wrong number of fields
 ```
