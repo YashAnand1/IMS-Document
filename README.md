@@ -18,7 +18,6 @@ consider adding a logo and cover-art
   - [🌿 Managing Inventories With IMS-Client](#-managing-inventories-with-ims-client)
 - [**🎊 User Access & Control**](#-User-Access-&-Control)
 - [**💢 Troubleshooting Issues & Errors**](#-troubleshooting-issues--errors)
-
 _____________________________________________________________________________________
 
 
@@ -109,19 +108,29 @@ Once the Inventory-Spreadsheet and Custom-Commands have been made, the `ims-clie
 
 1. After the `ims-client` executable has been started, the user would be required to login. Login with User `admin` with Password `admin`, that is created when this application has been run for the first time. 
 
+<div align="center">
 ![img](https://i.imgur.com/bUR5108.png)
+</div>
 
 2. Once logged in, use `upload <spreadsheetname.xlsx>` if Inventory-Spreadsheet created in the extracted directory or `upload </path/to/spreadsheet/spreadsheetname.xlsx>` if the sheet is in another directory.
 
+<div align="center">
 ![img](https://i.imgur.com/wXMCgpy.png)
+</div>
 
 3. Once the spreadsheet has been uploaded, user can start interacting with the uploaded Inventory-Data using the Custom-Commands from the `ims.conf` file. As an example, the output of `get namespace` would be as follows:
 
+<div align="center">
+
 ![img](https://i.imgur.com/H8dxFg0.png)
+</div>
 
 4. Since it is also possible that a user may wish to retrieve information from a specific data, they can use `list <column name>`. For example if a user wishes to list all of the hostnames, they can use `list hostnames`:
 
+<div align="center">
+
 ![img](https://i.imgur.com/TWktVhM.png)
+</div>
 
 ### 🎊 **User Access & Control**
 IMS utilises Role Based Access Control for security purposes to decide what actions are permitted to which user. By default, `admin user` is created with complete access over IMS but users added afterwards, will be low-level users with limited access. The steps of utilising RBAC are as follows:
