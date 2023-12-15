@@ -16,7 +16,7 @@ consider adding a logo and cover-art
   - [🌿 Creating Inventory-Spreadsheet](#-creating-inventory-spreadsheet)
   - [🌿 Creating Custom-Commands](#-creating-custom-commands)
   - [🌿 Managing Inventories With IMS-Client](#-managing-inventories-with-ims-client)
-- [**🎊 User Access & Control**](#-User-Access-&-Control
+- [**🎊 User Access & Control**](#-User-Access-&-Control)
 - [**💢 Troubleshooting Issues & Errors**](#-troubleshooting-issues--errors)
 
 _____________________________________________________________________________________
