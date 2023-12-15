@@ -118,6 +118,8 @@ Once the Inventory-Spreadsheet and Custom-Commands have been made, the `ims-clie
 
 ![img](https://i.imgur.com/H8dxFg0.png)
 
+4. Users can also find crea
+
 ## 💢 Troubleshooting Issues & Errors:
 
 ### Error: wrong number of fields
