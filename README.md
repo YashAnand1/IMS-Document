@@ -106,36 +106,57 @@ In the above file, the IP address is of the machine running the IMS-Server. Sinc
 ### 🌿 **Managing Inventories With IMS-Client**                               
 Once the Inventory-Spreadsheet and Custom-Commands have been made, the `ims-client` executable should be run for getting started with managing inventories. Provided below are explanations of the steps required to use IMS-Client for Managing Inventories.
 
-1. After the `ims-client` executable has been started, the user would be required to login. Login with User `admin` with Password `admin`, that is created when this application has been run for the first time. 
+**1. Logging In**
+After the `ims-client` executable has been started, the user would be required to login. Login with User `admin` with Password `admin`, that is created when this application has been run for the first time. 
 
 <div align="center">
-  
 ![img](https://i.imgur.com/bUR5108.png)
-
 </div>
 
-2. Once logged in, use `upload <spreadsheetname.xlsx>` if Inventory-Spreadsheet created in the extracted directory or `upload </path/to/spreadsheet/spreadsheetname.xlsx>` if the sheet is in another directory.
+**2. Uploading Inventory**
+Once logged in, use `upload <spreadsheetname.xlsx>` if Inventory-Spreadsheet created in the extracted directory or `upload </path/to/spreadsheet/spreadsheetname.xlsx>` if the sheet is in another directory.
 
 <div align="center">
-  
 ![img](https://i.imgur.com/wXMCgpy.png)
-  
 </div>
 
-3. Once the spreadsheet has been uploaded, user can start interacting with the uploaded Inventory-Data using the Custom-Commands from the `ims.conf` file. As an example, the output of `get namespace` would be as follows:
+**3. Using Custom-Commands** 
+Once the spreadsheet has been uploaded, user can start interacting with the uploaded Inventory-Data using the Custom-Commands from the `ims.conf` file. As an example, the output of `get namespace` would be as follows:
 
 <div align="center">
 
 ![img](https://i.imgur.com/H8dxFg0.png)
-
 </div>
 
-4. Since it is also possible that a user may wish to retrieve information from a specific data, they can use `list <column name>`. For example if a user wishes to list all of the hostnames, they can use `list hostnames`:
+**4. Listing**
+Since it is also possible that a user may wish to retrieve information from a specific data, they can use `list <column name>`. For example if a user wishes to list all of the hostnames, they can use `list hostnames`:
 
 <div align="center">
 
 ![img](https://i.imgur.com/TWktVhM.png)
+</div>
 
+**5. Filtering**
+Filtering of the data can be done from the IMS-Client Application using the `select <column1>,<column 'n'> FROM <project> WHERE <column="value">`. Through this way, users can create SQL-like filters on the uploaded Inventory-data and fetch specific information as per their preference. An example of such filtration is:
+```
+select HOSTNAME,IP,APP_NAME,RAM FROM XYZ WHERE RAM="64GB",OS="RHEL"
+```
+<div align="center">
+
+![img](https://i.imgur.com/apVKMgH.png)
+</div>
+
+Similarly, filtering of the data can also be done directly from the `ims.conf` file. In order to do so, user can create. An example of such filtration would include modifying the `ims.conf` in the following manner:
+```
+NAMESPACE
+PROJECT=XYZ|RAM=64GB|OS=RHEL
+HOSTNAME,IP,APPLICATION_ENVIRONMENT,DATA_CENTER,SETUP_ENVIRONMENT
+```
+Here, a filter is set for the PROJECT XYZ where only those servers are to be displayed that have 64GB RAM and RHEL as their OS. Such multiple filtering can come in handy when retrieving very specific information. If filter is to be removed, the `|RAM=64GB|OS=RHEL` condition will be deleted and from the IMS-Client, user will have to run `reload conf` to load update changes. 
+
+<div align="center">
+
+![img](https://i.imgur.com/Q8O60Ce.png)
 </div>
 
 ### 🎊 **User Access & Control**
