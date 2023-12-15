@@ -8,11 +8,15 @@ consider adding a logo and cover-art
 
 </div>
 
-
 ## **📚 Index**
 
-1. [Overview](#--Overview)
-2. Getting Started
+- [**🎯 Overview**](#-overview)
+- [**🌱 Getting Started**](#-getting-started)
+  - [🌿 Setting-Up](#-setting-up)
+  - [🌿 Creating Inventory-Spreadsheet](#-creating-inventory-spreadsheet)
+  - [🌿 Creating Custom-Commands](#-creating-custom-commands)
+  - [🌿 Managing Inventories With IMS-Client](#-managing-inventories-with-ims-client)
+- [**💢 Troubleshooting Issues & Errors**](#-troubleshooting-issues--errors)
 
 _____________________________________________________________________________________
 
@@ -155,3 +159,4 @@ NODES
 - Occurs when a header that does not exist has been mentioned in the `ims.conf` for a custom-command
 - Ensure that there is no spelling-mistake in the `ims.conf`
 - Check if the mentioned header even exists in the Spreadsheet 
+
