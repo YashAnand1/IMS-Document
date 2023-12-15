@@ -57,9 +57,19 @@ While creating an Inventory-Spreasheet, the following should be ensured:
 - The standardised format is being followed
 
 ### **Creating Custom-Commands**                    
-IMS provides the user with the flexibility to create their own custom commands for retrieving inventory-data, by defining column-headers from the Inventory Spreadsheet, for displaying the inventory-data. It is heavily recommended to follow the analogy provided below for creating Custom-Commands:
+IMS provides the user with the flexibility to create their own custom commands for retrieving inventory-data, by defining column-headers from the Inventory Spreadsheet, for displaying the inventory-data. It is heavily recommended to follow the analogy provided below for creating Custom-Commands related to objects. However, it should be noted that if data is insufficient then user can choose objects according to their data. The analogy is as follows:
 ```
-
+kubectl get ns – DC, DR
+kubectl get deployments – Applications
+kubectl get statefulsets – Clustered Applications
+kubectl get replicasets – Load Balanced Applications
+kubectl get configmap – Each Application's configuration
+kubectl get nodes – Infra details - VMs, BareMetal, Kubernetes Cluster Name
+kubectl get pods – Each Application Instance
+kubectl get pv – Total Storage (SAN/LAN)
+kubectl get pvc – Individual Application's Shared Storage (Block Device, File)
+Kubectl get svc - Application Endpoints (Ports)
+Kubectl get ingress - Load Balancers & Ingress (In case of K8S-based application)
 ```
 
 | Example: `get nodes` could be used to tabularly display Inventory-data with columns like RAM, CPU, WWWN, etc. |
@@ -93,12 +103,15 @@ In the above file, the IP address is of the machine running the IMS-Server. Sinc
 Once the Inventory-Spreadsheet and Custom-Commands have been made, the `ims-client` executable should be run for getting started with managing inventories. Provided below are explanations of the steps required to use IMS-Client for Managing Inventories.
 
 1. After the `ims-client` executable has been started, the user would be required to login. Login with User `admin` with Password `admin`, that is created when this application has been run for the first time. 
+
 ![img](https://i.imgur.com/RymRcQM.png)
 
 2. Once logged in, use `upload <spreadsheetname.xlsx>` if Inventory-Spreadsheet created in the extracted directory or `upload </path/to/spreadsheet/spreadsheetname.xlsx>` if the sheet is in another directory.
+
 ![img](https://i.imgur.com/wXMCgpy.png)
 
 3. Once the spreadsheet has been uploaded, user can start interacting with the uploaded Inventory-Data using the Custom-Commands from the `ims.conf` file. As an example, the output of `get namespace` would be as follows:
+
 ![img](https://i.imgur.com/H8dxFg0.png)
 
 ## Troubleshooting Issues & Errors:
