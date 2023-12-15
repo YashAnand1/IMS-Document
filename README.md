@@ -129,13 +129,13 @@ exit status 1
 - Ensure there is no text outside of the data-table & that Spreadsheet only has 1 tab 
 
 ### Issue: Output of `get <custom-command` Gives Empty Values
-------------------------------------------------------------------------------
+```
 ╭────┬──┬──────┬─────────┬──────┬────┬────────────┬────────────────┬─────────────╮
 │ SL │   RAM │ MEMFREE  │ TYPE │ OS │ OS_VERSION │ KERNEL_VERSION │ DATA_CENTER │
 ├────┼────────┼─────────┼──────┼────┼────────────┼────────────────┼─────────────┤
 ╰────┴───┴────┴─────────┴──────┴────┴────────────┴────────────────┴─────────────╯
 NODES
-
+```
 - Caused by wrong/inconsistent data in `ims.conf`
 - Check to make sure that the sequence mentioned in the ### **Creating Custom-Commands** section is correct
 - Ensure that the project name is as same as the one mentioned in the Inventory-Spreadsheet
