@@ -48,7 +48,7 @@ In order **to setup IMS** on a machine, the latest version can be downloaded fro
 - In 2 separate terminal tabs, run the 'ims-server' and 'imsclient' executables 
 
 ### **Creating Inventory-Spreadsheet**                              
-Once the etcd-database and IMS-Server are running in the background, the IMS-Client can now be used for managing inventories. However, it is first required for the user to have their Inventory details added in a Spreadsheet that follows [this format](https://docs.google.com/spreadsheets/d/1uD_DGOMjUwTxNnKYPTUNstaMcq13ON43Eb_JR8EJIVc/edit#gid=0). Once the spreadsheet has been created, it should be downloaded in the XLSX format for uploading it to IMS.
+Once the etcd-database and IMS-Server are running in the background, the IMS-Client can now be used for managing inventories. However, it is first required for the user to have their Inventory details added in a Spreadsheet that follows [this format](https://docs.google.com/spreadsheets/d/1uD_DGOMjUwTxNnKYPTUNstaMcq13ON43Eb_JR8EJIVc/edit#gid=0). Once the spreadsheet has been created, it should be downloaded in the XLSX format for uploading it to IMS. It is recommended to download in the same directory as the IMS-Client application.
 
 While creating an Inventory-Spreasheet, the following should be ensured:
 - No merged cells exist
@@ -57,7 +57,10 @@ While creating an Inventory-Spreasheet, the following should be ensured:
 - The standardised format is being followed
 
 ### **Creating Custom-Commands**                    
-IMS provides the user with the flexibility to create their own custom commands for retrieving inventory-data, by defining column-headers from the Inventory Spreadsheet, for displaying the inventory-data. 
+IMS provides the user with the flexibility to create their own custom commands for retrieving inventory-data, by defining column-headers from the Inventory Spreadsheet, for displaying the inventory-data. It is heavily recommended to follow the analogy provided below for creating Custom-Commands:
+```
+
+```
 
 | Example: `get nodes` could be used to tabularly display Inventory-data with columns like RAM, CPU, WWWN, etc. |
 |----------|
@@ -91,3 +94,51 @@ Once the Inventory-Spreadsheet and Custom-Commands have been made, the `ims-clie
 
 1. After the `ims-client` executable has been started, the user would be required to login. Login with User `admin` with Password `admin`, that is created when this application has been run for the first time. 
 ![img](https://i.imgur.com/RymRcQM.png)
+
+2. Once logged in, use `upload <spreadsheetname.xlsx>` if Inventory-Spreadsheet created in the extracted directory or `upload </path/to/spreadsheet/spreadsheetname.xlsx>` if the sheet is in another directory.
+![img](https://i.imgur.com/wXMCgpy.png)
+
+3. Once the spreadsheet has been uploaded, user can start interacting with the uploaded Inventory-Data using the Custom-Commands from the `ims.conf` file. As an example, the output of `get namespace` would be as follows:
+![img](https://i.imgur.com/H8dxFg0.png)
+
+## Troubleshooting Issues & Errors:
+
+### Error: wrong number of fields
+```
+Command: upload Inventory.xlsx
+2023/12/15 13:35:19 Entered into function
+2023/12/15 13:35:19 reading file
+2023/12/15 13:35:19 Failed to read CSV file: record on line 92: wrong number of fields
+exit status 1
+```
+- Caused by extra text in cells outside of the data-table
+- Also occurs if Spreadsheet has multiple tabs
+- Ensure there is no text outside of the data-table & that Spreadsheet only has 1 tab 
+
+### Issue: Output of `get <custom-command` Gives Empty Values
+------------------------------------------------------------------------------
+╭────┬──┬─────┬─────────┬─────────┬──────────┬───────────┬──────┬────┬────────────┬────────────────┬─────────────╮
+│ SL │  │ RAM │ MEMFREE │ MEMUSED │ SWAPFREE │ SWAPTOTAL │ TYPE │ OS │ OS_VERSION │ KERNEL_VERSION │ DATA_CENTER │
+├────┼──┼─────┼─────────┼─────────┼──────────┼───────────┼──────┼────┼────────────┼────────────────┼─────────────┤
+╰────┴──┴─────┴─────────┴─────────┴──────────┴───────────┴──────┴────┴────────────┴────────────────┴─────────────╯
+NODES
+
+- Caused by wrong/inconsistent data in `ims.conf`
+- Check to make sure that the sequence mentioned in the ### **Creating Custom-Commands** section is correct
+- Ensure that the project name is as same as the one mentioned in the Inventory-Spreadsheet
+- Run `reload conf` after making changes to the `ims.conf`
+
+### Issue: Output of `get <custom-command` Gives Empty Values
+<nil> in tabular-output of get <custom-command>
+```
+╭────┬─────┬──────────┬───────────────┬─────────────────────────┬─────────────┬───────────────────╮
+│ SL │     │ HOSTNAME │ IP            │ APPLICATION_ENVIRONMENT │ DATA_CENTER │ SETUP_ENVIRONMENT │
+├────┼─────┼──────────┼───────────────┼─────────────────────────┼─────────────┼───────────────────┤
+│ 1  │ XYZ │ Machine1 │ <nil>         │ application             │ dc-Delhi    │ <nil>             │
+├────┼─────┼──────────┼───────────────┼─────────────────────────┼─────────────┼───────────────────┤
+│ 2  │ XYZ │ Machine2 │ <nil>         │ application             │ dc-Delhi    │ <nil>             │
+╰────┴─────┴──────────┴───────────────┴─────────────────────────┴─────────────┴───────────────────╯
+```
+- Occurs when a header that does not exist has been mentioned in the `ims.conf` for a custom-command
+- Ensure that there is no spelling-mistake in the `ims.conf`
+- Check if the mentioned header even exists in the Spreadsheet 
