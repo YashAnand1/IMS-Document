@@ -137,7 +137,7 @@ exit status 1
 NODES
 ```
 - Caused by wrong/inconsistent data in `ims.conf`
-- Check to make sure that the sequence mentioned in the ### **Creating Custom-Commands** section is correct
+- Check to make sure that the sequence mentioned in the **[Creating Custom-Commands](https://github.com/YashAnand1/IMS-Document/blob/main/README.md#creating-custom-commands)** section is correct
 - Ensure that the project name is as same as the one mentioned in the Inventory-Spreadsheet
 - Run `reload conf` after making changes to the `ims.conf`
 
