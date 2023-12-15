@@ -132,30 +132,30 @@ Once the Inventory-Spreadsheet and Custom-Commands have been made, the `ims-clie
 ![img](https://i.imgur.com/TWktVhM.png)
 </div>
 
-## 🎊 **User Access & Control**
+### 🎊 **User Access & Control**
 IMS utilises Role Based Access Control for security purposes to decide what actions are permitted to which user. By default, `admin user` is created with complete access over IMS but users added afterwards, will be low-level users with limited access. The steps of utilising RBAC are as follows:
 
-### **Create Users** using the following command:
+1. **Create Users** using the following command:
 ```
 CREATE --USR <USERNAME>
 ```
 
-### **Delete Users** using the following command:
+2. **Delete Users** using the following command:
 ```
 DELETE --USR <USERNAME>
 ```
 
-### Command to **Switch Users** while staying in the IMS-Client application:
+3. Command to **Switch Users** while staying in the IMS-Client application:
 ```
 LOGIN
 ```
 
-### Command to **Change User Password** of the current user using the following command:
+4. Command to **Change User Password** of the current user using the following command:
 ```
 PASSWD
 ```
 
-### **Listing Users** using the following command:
+5. **Listing Users** using the following command:
 ```
 LIST USR
 ```
