@@ -16,6 +16,7 @@ consider adding a logo and cover-art
   - [🌿 Creating Inventory-Spreadsheet](#-creating-inventory-spreadsheet)
   - [🌿 Creating Custom-Commands](#-creating-custom-commands)
   - [🌿 Managing Inventories With IMS-Client](#-managing-inventories-with-ims-client)
+- [**🎊 User Access & Control**](#-User-Access-&-Control
 - [**💢 Troubleshooting Issues & Errors**](#-troubleshooting-issues--errors)
 
 _____________________________________________________________________________________
@@ -118,7 +119,37 @@ Once the Inventory-Spreadsheet and Custom-Commands have been made, the `ims-clie
 
 ![img](https://i.imgur.com/H8dxFg0.png)
 
-4. Users can also find crea
+4. Since it is also possible that a user may wish to retrieve information from a specific data, they can use `list <column name>`. For example if a user wishes to list all of the hostnames, they can use `list hostnames`:
+
+![img](https://i.imgur.com/TWktVhM.png)
+
+### 🎊 **User Access & Control**
+IMS utilises Role Based Access Control for security purposes to decide what actions are permitted to which user. By default, `admin user` is created with complete access over IMS but users added afterwards, will be low-level users with limited access. The steps of utilising RBAC are as follows:
+
+1. **Create Users** using the following command:
+```
+CREATE --USR <USERNAME>
+```
+
+2. **Delete Users** using the following command:
+```
+DELETE --USR <USERNAME>
+```
+
+3. Command to **Switch Users** while staying in the IMS-Client application:
+```
+LOGIN
+```
+
+4. Command to **Change User Password** of the current user using the following command:
+```
+PASSWD
+```
+
+5. **Listing Users** using the following command:
+```
+LIST USR
+```
 
 ## 💢 Troubleshooting Issues & Errors:
 
