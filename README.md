@@ -54,15 +54,31 @@ While creating an Inventory-Spreasheet, the following should be ensured:
 - No merged cells exist
 - Names of column headers are not changed
 - The standardised format is being followed
+- Project names do not contain spaces. Ex: `PROJECT 1` should be `PROJECT_1` under the Project column
 
 **Creating Custom-Commands**                    
-IMS provides the user with the flexibility to create their own custom commands for retrieving inventory-data, by defining column-headers from the Inventory Spreadsheet, for displaying the inventory-data. 
+IMS provides the user with the flexibility to create their own custom commands for retrieving inventory-data, by defining column-headers from the Inventory Spreadsheet, for displaying the inventory-data. Now when the user would run 'get <custom command>', the columns defined under that mentioned command will be displayed in the IMS-Client application.
 
-| **Use-case: When the user would run 'get <custom command>', the columns defined under that mentioned command will be displayed.** | 
 | Example: `get nodes` could be used to tabularly display Inventory-data with columns like RAM, CPU, WWWN, etc. |
 |----------|
 
-The overall 
+In order to create custom-commands, the user is required to open the `ims.conf` file from the extracted directory. Upon opening, this file would look similar to this:
+```
+http://127.0.0.1:3000
+
+3
+NAMESPACE
+PROJECT=project_name|SETUP_ENVIRONMENT=Production|DATA_CENTER=dc-Delhi
+HOSTNAME,IP,APPLICATION_ENVIRONMENT,DATA_CENTER,SETUP_ENVIRONMENT
+DEPLOYMENTS
+PROJECT=Shiksha_Portal
+HOSTNAME,IP,APP_NAME,OWNER_CONCTACT_DETAIL,APP_DESCRIPTION,GIT_ENVIRONMENT,GIT_REPO_URL,HAP>
+NODES
+PROJECT=Shiksha_Portal|OS=RHEL|OS_VERSION=7.9
+RAM,MEMFREE,MEMUSED,SWAPFREE,SWAPTOTAL,TYPE,OS,OS_VERSION,KERNEL_VERSION,DATA_CENTER
+```
+
+In the above file, the IP address is of the machine running the IMS-Server. Since we are running IMS-Server on the same machine as the IMS-Client, we use the loop-back address.
 
 **Uploading Spreadsheet**                               
 In order to upload the spreadsheet into 
