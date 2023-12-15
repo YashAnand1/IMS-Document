@@ -58,7 +58,8 @@ While creating an Inventory-Spreasheet, the following should be ensured:
 **Creating Custom-Commands**                    
 IMS provides the user with the flexibility to create their own custom commands for retrieving inventory-data, by defining column-headers from the Inventory Spreadsheet, for displaying the inventory-data. 
 
-| **Use-case: When the user would run 'get <custom command>', the columns defined under that mentioned command will be displayed. Example: `get nodes` could be used to tabularly display Inventory-data with columns like RAM, CPU, WWWN, etc.** |
+| **Use-case: When the user would run 'get <custom command>', the columns defined under that mentioned command will be displayed.** | 
+| Example: `get nodes` could be used to tabularly display Inventory-data with columns like RAM, CPU, WWWN, etc. |
 |----------|
 
 The overall 
