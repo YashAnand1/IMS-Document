@@ -191,7 +191,7 @@ LIST USR
 
 ## 💢 Troubleshooting Issues & Errors:
 
-1. Error: wrong number of fields
+1. **Error**: wrong number of fields
 ```
 Command: upload Inventory.xlsx
 2023/12/15 13:35:19 Entered into function
@@ -203,7 +203,7 @@ exit status 1
 - Also occurs if Spreadsheet has multiple tabs
 - Ensure there is no text outside of the data-table & that Spreadsheet only has 1 tab 
 
-2. Issue: Output of `get <custom-command` Gives Empty Values
+2. **Issue**: Output of `get <custom-command` Gives Empty Values
 ```
 ╭────┬────────┬─────────┬──────┬────┬────────────┬────────────────┬─────────────╮
 │ SL │   RAM  │ MEMFREE │ TYPE │ OS │ OS_VERSION │ KERNEL_VERSION │ DATA_CENTER │
@@ -216,7 +216,7 @@ NODES
 - Ensure that the project name is as same as the one mentioned in the Inventory-Spreadsheet
 - Run `reload conf` after making changes to the `ims.conf`
 
-3. Issue: Output of `get <custom-command` Gives Empty Values
+3. **Issue**: Output of `get <custom-command` Gives Empty Values
 <nil> in tabular-output of get <custom-command>
 ```
 ╭────┬─────┬──────────┬───────────────┬─────────────────────────┬─────────────┬───────────────────╮
