@@ -110,6 +110,7 @@ Once the Inventory-Spreadsheet and Custom-Commands have been made, the `ims-clie
 After the `ims-client` executable has been started, the user would be required to login. Login with User `admin` with Password `admin`, that is created when this application has been run for the first time. 
 
 <div align="center">
+  
 ![img](https://i.imgur.com/bUR5108.png)
 </div>
 
@@ -117,6 +118,7 @@ After the `ims-client` executable has been started, the user would be required t
 Once logged in, use `upload <spreadsheetname.xlsx>` if Inventory-Spreadsheet created in the extracted directory or `upload </path/to/spreadsheet/spreadsheetname.xlsx>` if the sheet is in another directory.
 
 <div align="center">
+  
 ![img](https://i.imgur.com/wXMCgpy.png)
 </div>
 
