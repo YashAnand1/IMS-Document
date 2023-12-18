@@ -63,17 +63,17 @@ While creating an Inventory-Spreasheet, the following should be ensured:
 ### 🌿 **Creating Custom-Commands**                    
 IMS provides the user with the flexibility to create their own custom commands for retrieving inventory-data, by defining column-headers from the Inventory Spreadsheet, for displaying the inventory-data. It is heavily recommended to follow the analogy provided below for creating Custom-Commands related to objects. However, it should be noted that if data is insufficient then user can choose objects according to their preference and data. The analogy is as follows:
 ```
-kubectl get ns                                               –> Client/Project details - DC, DR
-kubectl get deployments                                      –> Application details
-kubectl get statefulsets                                     -> Clustered Applications
-kubectl get replicasets                                      –> Load Balanced Applications
-kubectl get configmap                                        -> Each Application's configuration
-kubectl get nodes                                            -> Infra details - VMs, BareMetal, Kubernetes Cluster Name
-kubectl get pods                                             -> Each Application's Instance
-kubectl get pv                                               -> Total Storage (SAN/LAN)
-kubectl get pvc                                              -> Individual Application's Shared Storage (Block Device, File)
-Kubectl get svc                                              -> Application Endpoints (Ports)
-Kubectl get ingress                                          -> Load Balancers & Ingress (In case of K8S-based application)
+get ns                                               –> Client/Project details - DC, DR
+get deployments                                      –> Application details
+get statefulsets                                     -> Clustered Applications
+get replicasets                                      –> Load Balanced Applications
+get configmap                                        -> Each Application's configuration
+get nodes                                            -> Infra details - VMs, BareMetal, Kubernetes Cluster Name
+get pods                                             -> Each Application's Instance
+get pv                                               -> Total Storage (SAN/LAN)
+get pvc                                              -> Individual Application's Shared Storage (Block Device, File)
+get svc                                              -> Application Endpoints (Ports)
+get ingress                                          -> Load Balancers & Ingress (In case of K8S-based application)
 ```
 
 | Example: `get nodes` could be used to tabularly display Inventory-data with columns like RAM, CPU, WWWN, etc. |
@@ -122,7 +122,7 @@ Once logged in, use `upload <spreadsheetname.xlsx>` if Inventory-Spreadsheet cre
 ![img](https://i.imgur.com/wXMCgpy.png)
 </div>
 
-**3. Using Custom-Commands** 
+**3. Retrieving Data: Using Custom-Commands** 
 Once the spreadsheet has been uploaded, user can start interacting with the uploaded Inventory-Data using the Custom-Commands from the `ims.conf` file. As an example, the output of `get namespace` would be as follows:
 
 <div align="center">
@@ -130,7 +130,7 @@ Once the spreadsheet has been uploaded, user can start interacting with the uplo
 ![img](https://i.imgur.com/H8dxFg0.png)
 </div>
 
-**4. Listing**
+**4. Retrieving Data: Using Listing**
 Since it is also possible that a user may wish to retrieve information from a specific data, they can use `list <column name>`. For example if a user wishes to list all of the hostnames, they can use `list hostnames`:
 
 <div align="center">
@@ -138,7 +138,7 @@ Since it is also possible that a user may wish to retrieve information from a sp
 ![img](https://i.imgur.com/TWktVhM.png)
 </div>
 
-**5. Filtering**
+**5. Retrieving Data: Using Filtering**
 Filtering of the data can be done from the IMS-Client Application using the `select <column1>,<column 'n'> FROM <project> WHERE <column="value">`. Through this way, users can create SQL-like filters on the uploaded Inventory-data and fetch specific information as per their preference. An example of such filtration is:
 ```
 select HOSTNAME,IP,APP_NAME,RAM FROM XYZ WHERE RAM="64GB",OS="RHEL"
@@ -159,6 +159,33 @@ Here, a filter is set for the PROJECT XYZ where only those servers are to be dis
 <div align="center">
 
 ![img](https://i.imgur.com/Q8O60Ce.png)
+</div>
+
+**6. Updating Cell**
+
+Users can update an existing cell by updating it using commands like `UPDATE --KEY /<NameOfClientFromSpreadsheet/RowNumber/ColumnHeader NewValue`. In this example, the first argument after the `--KEY` flag is the key of that cell and the argument afterwards is its value. Use case: If a user wishes to update the 'Setup Environment' of a server for a client called `CLIENTNAME` from 'Staging' to 'Production', they can do so by running `update --key /CLIENTNAME/1/SETUP_ENVIRONMENT Production`:
+
+<div align="center">
+
+![img](https://i.imgur.com/BUSryeP.gif)
+</div>
+
+**7. Creating Cell**
+
+Users can also create a new row using commands like `CREATE  --KEY /<NameOfClientFromSpreadsheet/RowNumber/ColumnHeader Value`. Use case: If a user wishes to add a new hostname to their inventory for a new server, they can do so by running `create --key /CLIENTNAME/3/HOSTNAME Machine3`:
+
+<div align="center">
+
+![img](https://i.imgur.com/3xL2w9I.gif)
+</div>
+
+**7. Deleting Cell**
+
+Users can delete an existing cell using commands like `DELETE  --KEY /<NameOfClientFromSpreadsheet/RowNumber/ColumnHeader Value`. Use case: If a user wishes to remoe the hostname for a server, they can do so by running `delete --key /CLIENTNAME/3/HOSTNAME Machine3`:
+
+<div align="center">
+
+![img](https://i.imgur.com/dIVPwiZ.gif)
 </div>
 
 ### 🎊 **User Access & Control**
