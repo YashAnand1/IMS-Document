@@ -179,7 +179,7 @@ Users can also create a new row using commands like `CREATE  --KEY /<NameOfClien
 ![img](https://i.imgur.com/3xL2w9I.gif)
 </div>
 
-**7. Deleting Cell**
+**8. Deleting Cell**
 
 Users can delete an existing cell using commands like `DELETE  --KEY /<NameOfClientFromSpreadsheet/RowNumber/ColumnHeader Value`. Use case: If a user wishes to remoe the hostname for a server, they can do so by running `delete --key /CLIENTNAME/3/HOSTNAME Machine3`:
 
