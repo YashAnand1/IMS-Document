@@ -46,7 +46,7 @@ ________________________________________________________________________________
 <!-- </div> -->
 
 ### 🌿 **Setting-Up**                                                      
-In order **to setup IMS** on a machine, the latest version can be downloaded from [here](). Once downloaded, follow these steps from the extracted directory: 
+In order **to setup IMS** on a machine, the latest version can be downloaded from [here](https://drive.google.com/file/d/1_OnuxlW5WT3tf9PAWjg8bQ2TH9bwPUCc/view?usp=sharing). Once downloaded, follow these steps from the extracted directory: 
 - Open the 'etcd-v3.5.10-linux-amd64' sub-directory or install etcd from [here](https://etcd.io/docs/v3.4/install/#install-pre-built-binaries) if system has a different architecture
 - Copy the 'etcd' binary to /usr/local/bin and run the 'etcd' command inside the extracted directory
 - In 2 separate terminal tabs, run the 'ims-server' and 'imsclient', by using `./ims-server` and `go run imsclient.go`, respectively.
