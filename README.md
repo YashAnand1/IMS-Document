@@ -59,6 +59,7 @@ While creating an Inventory-Spreasheet, the following should be ensured:
 - Project names & Column-headers do not contain spaces. Ex: `PROJECT 1` should be `PROJECT_1` under the Project column
 - Names of column headers are not changed
 - The standardised format is being followed
+- Columns for which data is unavailable are being skipped
 
 ### 🌿 **Creating Custom-Commands**                    
 IMS provides the user with the flexibility to create their own custom commands for retrieving inventory-data, by defining column-headers from the Inventory Spreadsheet, for displaying the inventory-data. It is heavily recommended to follow the analogy provided below for creating Custom-Commands related to objects. However, it should be noted that if data is insufficient then user can choose objects according to their preference and data. The analogy is as follows:
