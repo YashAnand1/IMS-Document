@@ -99,7 +99,7 @@ RAM,MEMFREE,MEMUSED,SWAPFREE,SWAPTOTAL,TYPE,OS,OS_VERSION,KERNEL_VERSION,DATA_CE
 ```
 
 In the above file, the IP address is of the machine running the IMS-Server. Since we are running IMS-Server on the same machine as the IMS-Client, we use the loop-back address. While creating the custom-commands, the following should therefore be ensured:
-- IP Address should be not be changed and the mandatory gap should not be cleared 
+- IP Address should not be changed and the mandatory gap should not be cleared 
 - The sequence of the Command Names, Project Names and Included Columns should not change
 - Any spaces (" ") should be avoided
 - Mentioned Project Name and Included Columns should match the Inventory-Spreadsheet
