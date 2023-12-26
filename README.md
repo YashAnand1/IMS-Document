@@ -108,7 +108,7 @@ In the above file, the IP address is of the machine running the IMS-Server. Sinc
 ### 🌿 **Managing Inventories With IMS-Client**                               
 Once the Inventory-Spreadsheet and Custom-Commands have been made, the `ims-client` executable should be run for getting started with managing inventories. Provided below are explanations of the steps required to use IMS-Client for Managing Inventories.
 
-**1. Logging In**
+**1. Logging In**          
 After the `ims-client` executable has been started, the user would be required to login. Login with User `admin` with Password `admin`, that is created when this application has been run for the first time. 
 
 <div align="center">
@@ -116,7 +116,7 @@ After the `ims-client` executable has been started, the user would be required t
 ![img](https://i.imgur.com/bUR5108.png)
 </div>
 
-**2. Uploading Inventory**
+**2. Uploading Inventory**                
 Once logged in, use `upload <spreadsheetname.xlsx>` if Inventory-Spreadsheet created in the extracted directory or `upload </path/to/spreadsheet/spreadsheetname.xlsx>` if the sheet is in another directory.
 
 <div align="center">
@@ -124,7 +124,7 @@ Once logged in, use `upload <spreadsheetname.xlsx>` if Inventory-Spreadsheet cre
 ![img](https://i.imgur.com/wXMCgpy.png)
 </div>
 
-**3. Retrieving Data: Using Custom-Commands** 
+**3. Retrieving Data: Using Custom-Commands**       
 Once the spreadsheet has been uploaded, user can start interacting with the uploaded Inventory-Data using the Custom-Commands from the `ims.conf` file. As an example, the output of `get namespace` would be as follows:
 
 <div align="center">
@@ -132,7 +132,7 @@ Once the spreadsheet has been uploaded, user can start interacting with the uplo
 ![img](https://i.imgur.com/H8dxFg0.png)
 </div>
 
-**4. Retrieving Data: Using Listing**
+**4. Retrieving Data: Using Listing**                
 Since it is also possible that a user may wish to retrieve information from a specific data, they can use `list <column name>`. For example if a user wishes to list all of the hostnames, they can use `list hostnames`:
 
 <div align="center">
@@ -140,7 +140,7 @@ Since it is also possible that a user may wish to retrieve information from a sp
 ![img](https://i.imgur.com/TWktVhM.png)
 </div>
 
-**5. Retrieving Data: Using Filtering**
+**5. Retrieving Data: Using Filtering**          
 Filtering of the data can be done from the IMS-Client Application using the `select <column1>,<column 'n'> FROM <project> WHERE <column="value">`. Through this way, users can create SQL-like filters on the uploaded Inventory-data and fetch specific information as per their preference. An example of such filtration is:
 ```
 select HOSTNAME,IP,APP_NAME,RAM FROM XYZ WHERE RAM="64GB",OS="RHEL"
@@ -163,7 +163,7 @@ Here, a filter is set for the PROJECT XYZ where only those servers are to be dis
 ![img](https://i.imgur.com/Q8O60Ce.png)
 </div>
 
-**6. Updating Cell**
+**6. Updating Cell**              
 
 Users can update an existing cell by updating it using commands like `UPDATE --KEY /<NameOfClientFromSpreadsheet/RowNumber/ColumnHeader NewValue`. In this example, the first argument after the `--KEY` flag is the key of that cell and the argument afterwards is its value. Use case: If a user wishes to update the 'Setup Environment' of a server for a client called `CLIENTNAME` from 'Staging' to 'Production', they can do so by running `update --key /CLIENTNAME/1/SETUP_ENVIRONMENT Production`:
 
@@ -172,7 +172,7 @@ Users can update an existing cell by updating it using commands like `UPDATE --K
 ![img](https://i.imgur.com/BUSryeP.gif)
 </div>
 
-**7. Creating Cell**
+**7. Creating Cell**            
 
 Users can also create a new row using commands like `CREATE  --KEY /<NameOfClientFromSpreadsheet/RowNumber/ColumnHeader Value`. Use case: If a user wishes to add a new hostname to their inventory for a new server, they can do so by running `create --key /CLIENTNAME/3/HOSTNAME Machine3`:
 
@@ -181,7 +181,7 @@ Users can also create a new row using commands like `CREATE  --KEY /<NameOfClien
 ![img](https://i.imgur.com/3xL2w9I.gif)
 </div>
 
-**8. Deleting Cell**
+**8. Deleting Cell**              
 
 Users can delete an existing cell using commands like `DELETE  --KEY /<NameOfClientFromSpreadsheet/RowNumber/ColumnHeader Value`. Use case: If a user wishes to remoe the hostname for a server, they can do so by running `delete --key /CLIENTNAME/3/HOSTNAME Machine3`:
 
@@ -190,15 +190,15 @@ Users can delete an existing cell using commands like `DELETE  --KEY /<NameOfCli
 ![img](https://i.imgur.com/dIVPwiZ.gif)
 </div>
 
-### 🎊 **User Access & Control**
+### 🎊 **User Access & Control**                
 IMS utilises Role Based Access Control for security purposes to decide what actions are permitted to which user. By default, `admin user` is created with complete access over IMS but users added afterwards, will be low-level users with limited access. The steps of utilising RBAC are as follows:
 
-1. **Create Users** using the following command:
+1. **Create Users** using the following command:      
 ```
 CREATE --USR <USERNAME>
 ```
 
-2. **Delete Users** using the following command:
+2. **Delete Users** using the following command:      
 ```
 DELETE --USR <USERNAME>
 ```
