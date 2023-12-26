@@ -150,7 +150,7 @@ select HOSTNAME,IP,APP_NAME,RAM FROM XYZ WHERE RAM="64GB",OS="RHEL"
 ![img](https://i.imgur.com/apVKMgH.png)
 </div>
 
-Similarly, filtering of the data can also be done directly from the `ims.conf` file. In order to do so, user can create. An example of such filtration would include modifying the `ims.conf` in the following manner:
+Similarly, filtering of the data can also be done directly from the `ims.conf` file. An example of such filtration would include modifying the `ims.conf` in the following manner:
 ```
 NAMESPACE
 PROJECT=XYZ|RAM=64GB|OS=RHEL
