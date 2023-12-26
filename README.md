@@ -103,7 +103,7 @@ In the above file, the IP address is of the machine running the IMS-Server. Sinc
 - The mandatory gap after IP Address should not be cleared 
 - The sequence of the Command Names, Project Names and Included Columns should not change
 - Any spaces (" ") should be avoided
-- Mentioned Project Name and Included Columns should match the Inventory-Spreadsheet
+- Mentioned Project Names and Included Columns should match the Inventory-Spreadsheet
 
 ### 🌿 **Managing Inventories With IMS-Client**                               
 Once the Inventory-Spreadsheet and Custom-Commands have been made, the `ims-client` executable should be run for getting started with managing inventories. Provided below are explanations of the steps required to use IMS-Client for Managing Inventories.
