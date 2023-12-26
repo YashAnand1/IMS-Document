@@ -172,9 +172,9 @@ Users can update an existing cell by updating it using commands like `UPDATE --K
 ![img](https://i.imgur.com/BUSryeP.gif)
 </div>
 
-**7. Creating Cell**            
+**7. Creating Column**            
 
-Users can also create a new row using commands like `CREATE  --KEY /<NameOfClientFromSpreadsheet/RowNumber/ColumnHeader Value`. Use case: If a user wishes to add a new hostname to their inventory for a new server, they can do so by running `create --key /CLIENTNAME/3/HOSTNAME Machine3`:
+Users can also create a new row using commands like `CREATE  --KEY /<NameOfClientFromSpreadsheet/RowNumber/ColumnHeader Value`. Use case: If a user wishes to add a new column called 'Active Server' to their inventory, they can do so by running `create --key /CLIENTNAME/1/ACTIVE_SERVER Yes`. A similar example will be as follows:
 
 <div align="center">
 
