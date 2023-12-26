@@ -109,7 +109,7 @@ In the above file, the IP address is of the machine running the IMS-Server. Sinc
 Once the Inventory-Spreadsheet and Custom-Commands have been made, the `ims-client` executable should be run for getting started with managing inventories. Provided below are explanations of the steps required to use IMS-Client for Managing Inventories.
 
 **1. Logging In**          
-After the `ims-client` executable has been started, the user would be required to login. Login with User `admin` with Password `admin`, that is created when this application has been run for the first time. 
+After the `ims-client` applicaton has started, the user would be required to login. This can be done by entering User as `admin` with Password `admin`. These credentials are permanently created when this application has been run for the first time. 
 
 <div align="center">
   
@@ -117,7 +117,7 @@ After the `ims-client` executable has been started, the user would be required t
 </div>
 
 **2. Uploading Inventory**                
-Once logged in, use `upload <spreadsheetname.xlsx>` if Inventory-Spreadsheet created in the extracted directory or `upload </path/to/spreadsheet/spreadsheetname.xlsx>` if the sheet is in another directory.
+Use `upload <spreadsheetname.xlsx>` when the Inventory-Spreadsheet is present in the extracted directory or `upload </path/to/spreadsheet/spreadsheetname.xlsx>` if the Spreadsheet is in another directory.
 
 <div align="center">
   
@@ -125,7 +125,7 @@ Once logged in, use `upload <spreadsheetname.xlsx>` if Inventory-Spreadsheet cre
 </div>
 
 **3. Retrieving Data: Using Custom-Commands**       
-Once the spreadsheet has been uploaded, user can start interacting with the uploaded Inventory-Data using the Custom-Commands from the `ims.conf` file. As an example, the output of `get namespace` would be as follows:
+Once the spreadsheet has been uploaded, user can start interacting with the uploaded Inventory-Data using the Custom-Commands from the `ims.conf` file. As an example, the output of running the `get <custom-command>` or `get namespace` would be as follows:
 
 <div align="center">
 
