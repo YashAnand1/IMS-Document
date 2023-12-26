@@ -91,10 +91,10 @@ NAMESPACE                                                                       
 PROJECT=project_name                                                                 -> Project Name (Same as Project Column)
 HOSTNAME,IP,APPLICATION_ENVIRONMENT,DATA_CENTER,SETUP_ENVIRONMENT                    -> Included Columns
 DEPLOYMENTS                                                                          -> Command Name
-PROJECT=Shiksha_Portal                                                               -> Project Name (Same as Project Column)
+PROJECT=project_name                                                                 -> Project Name (Same as Project Column)
 HOSTNAME,IP,APP_NAME,OWNER_CONCTACT_DETAIL,APP_DESCRIPTION,GIT_ENVIRONMENT           -> Included Columns
 NODES                                                                                -> Command Name
-PROJECT=Shiksha_Portal                                                               -> Project Name (Same as Project Column)
+PROJECT=project_name                                                                 -> Project Name (Same as Project Column)
 RAM,MEMFREE,MEMUSED,SWAPFREE,SWAPTOTAL,TYPE,OS,OS_VERSION,KERNEL_VERSION,DATA_CENTER -> Included Columns
 ```
 
