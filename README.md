@@ -163,7 +163,7 @@ Here, a filter is set for the PROJECT XYZ where only those servers are to be dis
 ![img](https://i.imgur.com/Q8O60Ce.png)
 </div>
 
-**6. Updating Cell**              
+**6. Updating Data**              
 
 Users can update an existing cell by updating it using commands like `UPDATE --KEY /<NameOfClientFromSpreadsheet/RowNumber/ColumnHeader NewValue`. In this example, the first argument after the `--KEY` flag is the key of that cell and the argument afterwards is its value. Use case: If a user wishes to update the 'Setup Environment' of a server for a client called `CLIENTNAME` from 'Staging' to 'Production', they can do so by running `update --key /CLIENTNAME/1/SETUP_ENVIRONMENT Production`:
 
@@ -172,9 +172,12 @@ Users can update an existing cell by updating it using commands like `UPDATE --K
 ![img](https://i.imgur.com/BUSryeP.gif)
 </div>
 
-**7. Creating Cells**            
+**7. Creating Rows**            
 
-Users can also create a new row using commands like `CREATE  --KEY /<NameOfClientFromSpreadsheet/RowNumber/ColumnHeader Value`. Use case: If a user wishes to add a new column called 'Active Server' to their inventory, they can do so by running `create --key /CLIENTNAME/1/ACTIVE_SERVER Yes`. A similar example will be as follows:
+Users can also create a new row using commands like `CREATE  --KEY /<NameOfClientFromSpreadsheet/RowNumber/ProjectName .`. Use case: If a user wishes to add a new row called to the existing inventory, they can do so through the following steps: 
+- `select project`
+- `create --key /CLIENTNAME/1/XYZ .` for creating the row
+- `create --key /CLIENTNAME/1/HOSTNAME Machine3` for adding values to the row
 
 <div align="center">
 
