@@ -178,8 +178,14 @@ Users can also create a new row using commands like `CREATE  --KEY /<Client_Name
 - `select project`
 - `create --key /CLIENTNAME/3/PROJECT XYZ` where XYZ is the name of the project for which a third row is to be added
 
+<div align="center">
+
+![img](https://i.imgur.com/3xL2w9I.gif)
+</div>
+
+
 **7.1. Adding Data To New Rows**
-In IMS, the cells are represented by key-value pairs. If user comes across a cell which has <nil> as its value, then that means that this cell is empty or that the key has not been created that would store this cell's value. **NOTE:** In the current version of IMS, the user may still need to create keys-value pairs for the newly created row in case <nil> is not being displayed for header-values.
+In IMS, the cells are represented by key-value pairs. When a user creates a new row, it's values will be empty and any cell which has <nil> as its value, would mean that its key has not been created for storing this cell's value. **NOTE:** In the current version of IMS, the user would still need to create keys-value pairs for the newly created row even if <nil> is not being displayed and values from columns above are being displayed instead.
 
 To add the values to the cells, I ran the following commands that were in the form of `CREATE --KEY /<Client_Name>/<RowNumberOfCell>/<HeaderOfCell> <Cell_Value>` for creating keys for representing the cells:
 - create --key /CLIENTNAME/3/HOSTNAME Machine3
@@ -188,7 +194,7 @@ To add the values to the cells, I ran the following commands that were in the fo
 - create --key /CLIENTNAME/3/DATA_CENTER dc-Kolkata
 - create --key /CLIENTNAME/3/SETUP_ENVIRONMENT Dev
 
-The output of following the steps mentioned in this section were as follows:
+The output of following the steps above for creating key-value pairs are as follows:
 
 <div align="center">
 
