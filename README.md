@@ -57,7 +57,7 @@ Once the etcd-database and IMS-Server are running in the background, the IMS-Cli
 While creating an Inventory-Spreasheet, the following should be ensured:
 - No merged cells exist
 - Project names & Column-headers do not contain spaces. Ex: `PROJECT 1` should be `PROJECT_1` under the Project column
-- Names of column headers are not changed
+- Names of column headers are not changed for header-values
 - The standardised format is being followed
 - Columns for which data is unavailable are being skipped
 
@@ -180,7 +180,7 @@ Users can also create a new row using commands like `CREATE  --KEY /<Client_Name
 
 <div align="center">
 
-![img](https://i.imgur.com/3xL2w9I.gif)
+![img](https://i.imgur.com/hHMuOti.gif)
 </div>
 
 
