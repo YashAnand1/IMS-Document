@@ -201,7 +201,17 @@ The output of following the steps above for creating key-value pairs are as foll
 ![img](https://i.imgur.com/0sIpAwI.gif)
 </div>
 
-**8. Deleting Cell**              
+**8. Creating Columns**   
+The new column can be created by running the `CREATE --KEY /<Client_Name>/<RowNumberOfCell>/<NewColumn> <Cell_Value>`. This new column has to be included under the custom command in the `ims.conf` file for which the output is to be retrieved. After the modification has been made, `reload conf` is to be run inside the IMS-Client Application. 
+
+An example of creating a column is `create --key /CLIENTNAME/2/NewColumn ValueForRow2`, which will create a column called 'NewColumn' with its second row valued with 'ValueForRow2'. Similarly, the value of the first row of this column can also be added by running `create --key /CLIENTNAME/1/NewColumn ValueForRow1`, where the 'ValueForRow1' value is entered in the first row of the 'NewColumn' column.
+
+<div align="center">
+
+![img](https://i.imgur.com/RaFYYaF.gif)
+</div>
+
+**9. Deleting Cell**              
 
 Users can delete an existing cell using commands like `DELETE  --KEY /<NameOfClientFromSpreadsheet/RowNumber/ColumnHeader Value`. Use case: If a user wishes to remoe the hostname for a server, they can do so by running `delete --key /CLIENTNAME/3/HOSTNAME Machine3`:
 
