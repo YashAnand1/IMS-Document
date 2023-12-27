@@ -198,7 +198,7 @@ The output of following the steps above for creating key-value pairs are as foll
 
 <div align="center">
 
-![img](https://i.imgur.com/3xL2w9I.gif)
+![img](https://i.imgur.com/0sIpAwI.gif)
 </div>
 
 **8. Deleting Cell**              
