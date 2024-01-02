@@ -1,6 +1,11 @@
 <div align="center">
 
 consider adding a logo and cover-art
+<!-- <h1 align="center"> -->
+learn from others:
+https://github.com/SuperDuperDB/superduperdb
+
+<!-- </h1> -->
 
 <!-- <h1 align="center"> -->
 # Inventory Management System
