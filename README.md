@@ -1,11 +1,11 @@
 <div align="center">
 
 consider adding a logo and cover-art
-<!-- <h1 align="center"> -->
+<!--
 learn from others:
-https://github.com/SuperDuperDB/superduperdb
+https://github.com/SuperDuperDB/superduperdb - nice artwork and try to learn how they've got diff tab with their readme file
 
-<!-- </h1> -->
+-->
 
 <!-- <h1 align="center"> -->
 # Inventory Management System
