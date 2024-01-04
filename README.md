@@ -56,7 +56,7 @@ In order **to setup IMS** on a machine, the latest version can be downloaded fro
   - 2 or 4 **CPU Cores** & >80GB **SSD**.
   - Suggested 8GB **RAM**.
   - AMD64 (Linux) or ARM64 (Linux) **Architecture**; [etcd is in experimental stage in others](https://etcd.io/docs/v3.5/op-guide/supported-platform/).
-  - 64 **Bit**; [etcd has issues with 32 Bit](https://etcd.io/docs/v3.5/op-guide/supported-platform/#unsupported-platforms). 
+  - 64 **Bit** System; [etcd has issues with 32 Bit](https://etcd.io/docs/v3.5/op-guide/supported-platform/#unsupported-platforms). 
 - Copy the 'etcd' binary to /usr/local/bin and run the 'etcd' command inside the extracted directory
 - In 2 separate terminal tabs, run the 'ims-server' and 'imsclient', by using `./ims-server` and `go run imsclient.go`, respectively.
 
