@@ -39,7 +39,7 @@ As of now, this document aims to empower Keen & Able Employees with a general an
 
 <div align="center">
  
-| **Some more features that are to be added include Monitoring, Logs, Versioning, Backup & Restoration. Please note that this document is a work in progress and that it is liable to further changes.** |
+| **Some more features that are to be added include Monitoring, Backup & Restoration. Please note that this document is a work in progress and that it is liable to further changes.** |
 |----------|
 </div>
 
@@ -52,9 +52,9 @@ ________________________________________________________________________________
 
 ### 🌿 **Setting-Up**                                                      
 In order **to setup IMS** on a machine, the latest version can be downloaded from [here](https://drive.google.com/file/d/1_OnuxlW5WT3tf9PAWjg8bQ2TH9bwPUCc/view?usp=sharing). Once downloaded, follow these steps from the extracted directory: 
-- Open the 'etcd-v3.5.10-linux-amd64' sub-directory or install etcd from [here](https://etcd.io/docs/v3.4/install/#install-pre-built-binaries) if system has a different architecture. Ensure following harware requirements are met:
-  - 2 or 4 **CPU Cores** & >80GB **SSD**.
-  - Suggested 8GB **RAM**.
+- Open the 'etcd-v3.5.10-linux-amd64' sub-directory or install etcd from [here](https://etcd.io/docs/v3.4/install/#install-pre-built-binaries) if system does not have the AMD64 architecture. Ensure that the following hardware requirements are met:
+  - 2 or 4 **CPU Cores**.
+  - Suggested 8GB **RAM** & >80GB **SSD**.
   - AMD64 (Linux) or ARM64 (Linux) **Architecture**; [etcd is in experimental stage in others](https://etcd.io/docs/v3.5/op-guide/supported-platform/).
   - 64 **Bit** System; [etcd has issues with 32 Bit](https://etcd.io/docs/v3.5/op-guide/supported-platform/#unsupported-platforms). 
 - Copy the 'etcd' binary to /usr/local/bin and run the 'etcd' command inside the extracted directory
@@ -299,3 +299,4 @@ NODES
 - Ensure that there is no spelling-mistake in the `ims.conf`
 - Check if the mentioned header even exists in the Spreadsheet 
 
+<!-- logs revisioning
