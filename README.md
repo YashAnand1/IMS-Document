@@ -58,7 +58,7 @@ In order **to setup IMS** on a machine, the latest version can be downloaded fro
   - AMD64 (Linux) or ARM64 (Linux) **Architecture**; [etcd is in experimental stage in others](https://etcd.io/docs/v3.5/op-guide/supported-platform/).
   - 64 **Bit** System; [etcd has issues with 32 Bit](https://etcd.io/docs/v3.5/op-guide/supported-platform/#unsupported-platforms). 
 - Copy the 'etcd' binary to /usr/local/bin and run the 'etcd' command inside the extracted directory
-- In 2 separate terminal tabs, run the 'ims-server' and 'imsclient', by using `./ims-server` and `go run imsclient.go`, respectively.
+- In 2 separate terminal tabs, run the 'ims-server' and 'imsclient', by using `./ims-server` and `./imsclient`, respectively.
 
 ### 🌿 **Creating Inventory-Spreadsheet**                              
 Once the etcd-database and IMS-Server are running in the background, the IMS-Client can now be used for managing inventories. However, it is first required for the user to have their Inventory details added in a Spreadsheet that follows [this format](https://docs.google.com/spreadsheets/d/1uD_DGOMjUwTxNnKYPTUNstaMcq13ON43Eb_JR8EJIVc/edit#gid=0). Once the spreadsheet has been created, it should be downloaded in the XLSX format for uploading it to IMS. It is recommended to download in the same directory as the IMS-Client application.
