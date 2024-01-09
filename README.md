@@ -51,7 +51,7 @@ ________________________________________________________________________________
 <!-- </div> -->
 
 ### 🌿 **Setting-Up**                                                      
-In order **to setup IMS** on a machine, the latest version can be downloaded from [here](https://drive.google.com/file/d/1h-GSUdg-ByVKDrwdR4BZupc_LEwP3F1w/view?usp=sharing). Once downloaded, follow these steps from the extracted directory: 
+In order **to setup IMS** on a machine, the latest version can be downloaded from [here](https://drive.google.com/file/d/1WMoo_7kvbPgdqZitNLeZpUKk6IYhuhqx/view?usp=sharing). Once downloaded, follow these steps from the extracted directory: 
 - Open the 'etcd-v3.5.10-linux-amd64' sub-directory or install etcd from [here](https://etcd.io/docs/v3.4/install/#install-pre-built-binaries) if system does not have the AMD64 architecture. Ensure that the following hardware requirements are met:
   - 2 or 4 **CPU Cores**.
   - Suggested 8GB **RAM** & >80GB **SSD**.
